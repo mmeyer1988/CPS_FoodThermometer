@@ -1,1 +1,1 @@
-# CPS_FoodThermometer_client
+# CPS_FoodThermometer
