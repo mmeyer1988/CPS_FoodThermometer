@@ -28,11 +28,6 @@ led = GroveLed(5)
 
 relay = GroveRelay(6)
 
-
-temperature_file_name = 'temperature.csv'
-fieldnames = ['date', 'temperature']
-
-
 print('Mason Meyer - A Simple Internet Food Thermometer')
 
 target_temperature = int(input('* Set Target Temperature (less than 550 F): '))
