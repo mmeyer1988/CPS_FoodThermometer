@@ -7,10 +7,8 @@ from counterfit_shims_grove.counterfit_connection import CounterFitConnection
 from counterfit_shims_seeed_python_dht import DHT
 from counterfit_connection import CounterFitConnection
 from counterfit_shims_grove.grove_led import GroveLed
-
 from counterfit_shims_grove.adc import ADC
 from counterfit_shims_grove.grove_relay import GroveRelay
-
 from azure.iot.device import IoTHubDeviceClient, Message, MethodResponse
 
 connection_string = "HostName=food-sensor-hub-masonmeyer.azure-devices.net;DeviceId=food-sensor;SharedAccessKey=Co+dqsb4jl4clIGyeitP1VBI+ym0ugHmOd7gbQPl/dw="
@@ -53,8 +51,6 @@ device_client.on_method_request_received = handle_method_request
 
 while temp < target_temperature:
 
-
-
     humi, temp = sensor.read()
     temp = int(temp)
 
@@ -77,7 +73,6 @@ while temp < target_temperature:
            led.on()
            print('*** Warning: ' + str(target_temperature) + ' exceeded!')
 
-    
 
     time.sleep(time_sleep)
 
